@@ -1,0 +1,5 @@
+# Cleanup report (2026-08-27)
+before=46  after_dedup=46  after_offtopic=46
+duplicates_removed=0  offtopic_removed=0
+
+## Off-topic removed

@@ -37,14 +37,28 @@ def parse(readme_path):
         am = re.search(r"\*\*\s*.+?\*\*\s*,\s*([^,]+?)\s*et al", line)
         if am:
             auth = am.group(1).strip()
-        url = ""
-        um = re.search(r"\]\((https?://[^)]+)\)", line)
-        if um:
-            url = um.group(1)
+        # Collect every markdown link on the line. Entries may be:
+        #   `[Paper](real-url)`  OR  `[![arXiv](badge)](real-url)`
+        #   OR a badge-only link `[Paper](https://img.shields.io/badge/arXiv-<id>-...)`
+        # The canonical paper link is the one that is NOT a shields.io image.
+        # The arXiv id may live in the real link OR inside the badge itself.
+        urls = re.findall(r"\]\((https?://[^)]+)\)", line)
+        real = next((u for u in urls if "img.shields.io" not in u), None)
+        if real is None and urls:
+            real = urls[-1]
         arxiv = None
-        km = re.search(r"arxiv\.org/abs/([0-9]+\.[0-9]+)", url or "")
-        if km:
-            arxiv = km.group(1)
+        for u in urls:
+            km = re.search(r"arxiv\.org/abs/([0-9]+\.[0-9]+)", u)
+            if km:
+                arxiv = km.group(1)
+                break
+            km = re.search(r"arXiv-([0-9]+\.[0-9]+)", u)
+            if km:
+                arxiv = km.group(1)
+        if arxiv:
+            url = f"https://arxiv.org/abs/{arxiv}"
+        else:
+            url = real or ""
         venue = "arXiv" if arxiv else ""
         papers.append({
             "title": title,
