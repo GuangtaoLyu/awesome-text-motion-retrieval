@@ -23,16 +23,23 @@ def parse(readme_path):
     year = None
     papers = []
     for line in text.splitlines():
-        m = re.match(r"^#{1,2}\s+(\d{4})\b", line.strip())
+        # Year headings come in two shapes across the repos:
+        #   style/prediction: `## 2026`        (h2)
+        #   retrieval:        `### 2026`        (h3 subsection)
+        #   retrieval range:  `### 2022 and Earlier` (leading year recovered)
+        # Match h1–h3 so all of the above set the current `year` context.
+        m = re.match(r"^#{1,3}\s+(\d{4})\b", line.strip())
         if m:
             year = int(m.group(1))
             continue
-        m = re.search(r"\*\*(.+?)\*\*", line)
+        # Only treat numbered list items as papers:
+        #   `1. **Title** , Author et al. , [link]`
+        # Skip section intros / headings that contain bold description
+        # phrases (e.g. "**cross-modal retrieval** between human motion").
+        m = re.match(r"^\s*\d+\.\s+\*\*(.+?)\*\*", line)
         if not m:
             continue
         title = " ".join(m.group(1).split())
-        if len(title) < 10:  # skip short headings / badges
-            continue
         auth = ""
         am = re.search(r"\*\*\s*.+?\*\*\s*,\s*([^,]+?)\s*et al", line)
         if am:

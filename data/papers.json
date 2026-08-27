@@ -1,196 +1,11 @@
 {
  "papers": [
   {
-   "title": "Beyond Global Alignment: Fine-Grained Motion-Language Retrieval via Pyramidal Shapley-Taylor Learning",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2601.21904",
-   "arxiv_id": "2601.21904",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "CLaM: An Open-Source Library for Performance Evaluation of Text-driven Human Motion Generation",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://dl.acm.org/doi/10.1145/3664647.3685523",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Context-based Motion Retrieval using Open Vocabulary Methods for Autonomous Driving",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2508.00589",
-   "arxiv_id": "2508.00589",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "cross-modal retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Cross-Modal Retrieval for Motion and Text via DropTriple Loss",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2305.04195",
-   "arxiv_id": "2305.04195",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "drive generation",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Exploring Vision Transformers for 3D Human Motion-Language Models with Motion Patches",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2405.04771",
-   "arxiv_id": "2405.04771",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Fine-grained Motion Retrieval via Joint-Angle Motion Images and Token-Patch Late Interaction",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2603.09930",
-   "arxiv_id": "2603.09930",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "FineMoLA: Towards Fine-Grained Motion-Language Alignment from Clip-Level Supervision",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2608.01392",
-   "arxiv_id": "2608.01392",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "generation-oriented",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Hierarchical Semantics Alignment for 3D Human Motion Retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://dl.acm.org/doi/10.1145/3626772.3657804",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "improve text-to-motion generation",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Improving Fine-grained Understanding for Retrieval in Human Motion and Text",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://ieeexplore.ieee.org/document/10590073/",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "LaMP: Language-Motion Pretraining for Motion Generation, Retrieval, and Captioning",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2410.07093",
-   "arxiv_id": "2410.07093",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Learning Joint Representation of Human Motion and Language",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2210.15187",
-   "arxiv_id": "2210.15187",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "MATE: Motion-Aligned Word Embeddings for Text-to-Motion Generation",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://openreview.net/forum?id=5a865418ed9b9ce0d751835fd4b3d230c39274d8",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "MIME: Multimodal Interactive Motion Encoder",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2607.22702",
-   "arxiv_id": "2607.22702",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
    "title": "MoCHA: Denoising Caption Supervision for Motion-Text Retrieval",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Warner"
+   ],
+   "year": 2026,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2603.23684",
    "arxiv_id": "2603.23684",
@@ -199,185 +14,63 @@
    "added": "2026-08-27"
   },
   {
-   "title": "Modal-Enhanced Semantic Modeling for Fine-Grained 3D Human Motion Retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://dl.acm.org/doi/10.1145/3664647.3681625",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "MonSTeR: a Unified Model for Motion, Scene, Text Retrieval",
-   "authors": [],
-   "year": null,
+   "title": "MIME: Multimodal Interactive Motion Encoder",
+   "authors": [
+    "Zucek"
+   ],
+   "year": 2026,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2510.03200",
-   "arxiv_id": "2510.03200",
+   "url": "https://arxiv.org/abs/2607.22702",
+   "arxiv_id": "2607.22702",
    "source": "seed",
    "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
-   "title": "MotionCLIP: Exposing Human Motion Generation to CLIP Space",
-   "authors": [],
-   "year": null,
+   "title": "FineMoLA: Towards Fine-Grained Motion-Language Alignment from Clip-Level Supervision",
+   "authors": [
+    "Wang"
+   ],
+   "year": 2026,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2203.08063",
-   "arxiv_id": "2203.08063",
+   "url": "https://arxiv.org/abs/2608.01392",
+   "arxiv_id": "2608.01392",
    "source": "seed",
    "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
-   "title": "Multi-Instance Multi-Label Learning for Text-motion Retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://dl.acm.org/doi/10.1145/3664647.3681444",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Multi-Modal Motion Retrieval by Learning a Fine-Grained Joint Embedding Space",
-   "authors": [],
-   "year": null,
+   "title": "Fine-grained Motion Retrieval via Joint-Angle Motion Images and Token-Patch Late Interaction",
+   "authors": [
+    "Zhang"
+   ],
+   "year": 2026,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2507.23188",
-   "arxiv_id": "2507.23188",
+   "url": "https://arxiv.org/abs/2603.09930",
+   "arxiv_id": "2603.09930",
    "source": "seed",
    "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
-   "title": "Multimodal Generative AI with Autoregressive LLMs for Human Motion Understanding and Generation: A Way Forward",
-   "authors": [],
-   "year": null,
+   "title": "Beyond Global Alignment: Fine-Grained Motion-Language Retrieval via Pyramidal Shapley-Taylor Learning",
+   "authors": [
+    "Chen"
+   ],
+   "year": 2026,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2506.03191",
-   "arxiv_id": "2506.03191",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "PoseScript: Linking 3D Human Poses and Natural Language",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2210.11795",
-   "arxiv_id": "2210.11795",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "primary contribution",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "SAMR: Symmetric Masked Multimodal Modeling for General Multi-modal 3D Motion Retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://doi.org/10.1016/j.displa.2025.102987",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "SGAR: Structural Generative Augmentation for 3D Human Motion Retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/99e6344e5db70177724367b3e55a88c2-Abstract-Conference.html",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "text-motion retrieval",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Text-to-Motion Retrieval: Towards Joint Understanding of Human Motion Data and Natural Language",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://dl.acm.org/doi/10.1145/3539618.3592069",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "TMR: Text-to-Motion Retrieval Using Contrastive 3D Human Motion Synthesis",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "https://ieeexplore.ieee.org/document/10376599/",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Towards Highly-Constrained Human Motion Generation with Retrieval-Guided Diffusion Noise Optimization",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2605.08054",
-   "arxiv_id": "2605.08054",
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization",
-   "authors": [],
-   "year": null,
-   "venue": "",
-   "url": "",
-   "arxiv_id": null,
-   "source": "seed",
-   "category": "Text-Motion Retrieval",
-   "added": "2026-08-27"
-  },
-  {
-   "title": "Tri-Modal Motion Retrieval by Learning a Joint Embedding Space",
-   "authors": [],
-   "year": null,
-   "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2403.00691",
-   "arxiv_id": "2403.00691",
+   "url": "https://arxiv.org/abs/2601.21904",
+   "arxiv_id": "2601.21904",
    "source": "seed",
    "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
    "title": "WaMo: Wavelet-Enhanced Multi-Frequency Trajectory Analysis for Fine-Grained Text-Motion Retrieval",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Ren"
+   ],
+   "year": 2025,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2508.03343",
    "arxiv_id": "2508.03343",
@@ -386,9 +79,219 @@
    "added": "2026-08-27"
   },
   {
+   "title": "Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization",
+   "authors": [
+    "Lyu"
+   ],
+   "year": 2025,
+   "venue": "",
+   "url": "",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "SGAR: Structural Generative Augmentation for 3D Human Motion Retrieval",
+   "authors": [
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "NeurIPS",
+   "url": "https://papers.neurips.cc/paper_files/paper/2025/hash/99e6344e5db70177724367b3e55a88c2-Abstract-Conference.html",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "SAMR: Symmetric Masked Multimodal Modeling for General Multi-modal 3D Motion Retrieval",
+   "authors": [
+    "Li"
+   ],
+   "year": 2025,
+   "venue": "Displays",
+   "url": "https://doi.org/10.1016/j.displa.2025.102987",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Multi-Modal Motion Retrieval by Learning a Fine-Grained Joint Embedding Space",
+   "authors": [
+    "Yu"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2507.23188",
+   "arxiv_id": "2507.23188",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "MonSTeR: a Unified Model for Motion, Scene, Text Retrieval",
+   "authors": [
+    "Collorone"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2510.03200",
+   "arxiv_id": "2510.03200",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Context-based Motion Retrieval using Open Vocabulary Methods for Autonomous Driving",
+   "authors": [
+    "Englmeier"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2508.00589",
+   "arxiv_id": "2508.00589",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Tri-Modal Motion Retrieval by Learning a Joint Embedding Space",
+   "authors": [
+    "Yin"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2403.00691",
+   "arxiv_id": "2403.00691",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Multi-Instance Multi-Label Learning for Text-motion Retrieval",
+   "authors": [
+    "Yang"
+   ],
+   "year": 2024,
+   "venue": "ACM MM",
+   "url": "https://dl.acm.org/doi/10.1145/3664647.3681444",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Modal-Enhanced Semantic Modeling for Fine-Grained 3D Human Motion Retrieval",
+   "authors": [
+    "Shi"
+   ],
+   "year": 2024,
+   "venue": "ACM",
+   "url": "https://dl.acm.org/doi/10.1145/3664647.3681625",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "LaMP: Language-Motion Pretraining for Motion Generation, Retrieval, and Captioning",
+   "authors": [
+    "Li"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2410.07093",
+   "arxiv_id": "2410.07093",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Joint-Dataset Learning and Cross-Consistent Regularization for Text-to-Motion Retrieval",
+   "authors": [
+    "Messina"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2407.02104",
+   "arxiv_id": "2407.02104",
+   "source": "seed",
+   "category": "Datasets & Benchmarks",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Improving Fine-grained Understanding for Retrieval in Human Motion and Text",
+   "authors": [
+    "Yan"
+   ],
+   "year": 2024,
+   "venue": "IEEE",
+   "url": "https://ieeexplore.ieee.org/document/10590073/",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Hierarchical Semantics Alignment for 3D Human Motion Retrieval",
+   "authors": [
+    "Yang"
+   ],
+   "year": 2024,
+   "venue": "SIGIR",
+   "url": "https://dl.acm.org/doi/10.1145/3626772.3657804",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Exploring Vision Transformers for 3D Human Motion-Language Models with Motion Patches",
+   "authors": [
+    "Yu"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2405.04771",
+   "arxiv_id": "2405.04771",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "A Cross-Dataset Study for Text-based 3D Human Motion Retrieval",
+   "authors": [
+    "Bensabath"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2405.16909",
+   "arxiv_id": "2405.16909",
+   "source": "seed",
+   "category": "Datasets & Benchmarks",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "CLaM: An Open-Source Library for Performance Evaluation of Text-driven Human Motion Generation",
+   "authors": [
+    "Chen"
+   ],
+   "year": 2024,
+   "venue": "ACM MM",
+   "url": "https://dl.acm.org/doi/10.1145/3664647.3685523",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
    "title": "Chronologically Accurate Retrieval for Temporal Grounding of Motion-Language Models",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Fujiwara"
+   ],
+   "year": 2024,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2407.15408",
    "arxiv_id": "2407.15408",
@@ -397,31 +300,89 @@
    "added": "2026-08-27"
   },
   {
-   "title": "MLP: Motion Label Prior for Temporal Sentence Localization in Untrimmed 3D Human Motions",
-   "authors": [],
-   "year": null,
+   "title": "Text-to-Motion Retrieval: Towards Joint Understanding of Human Motion Data and Natural Language",
+   "authors": [
+    "Messina"
+   ],
+   "year": 2023,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2404.13657",
-   "arxiv_id": "2404.13657",
+   "url": "https://arxiv.org/abs/2305.15842",
+   "arxiv_id": "2305.15842",
    "source": "seed",
-   "category": "Motion Grounding",
+   "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
-   "title": "Text-controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion",
-   "authors": [],
-   "year": null,
+   "title": "TMR: Text-to-Motion Retrieval Using Contrastive 3D Human Motion Synthesis",
+   "authors": [
+    "Petrovich"
+   ],
+   "year": 2023,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2404.11375",
-   "arxiv_id": "2404.11375",
+   "url": "https://arxiv.org/abs/2305.00976",
+   "arxiv_id": "2305.00976",
    "source": "seed",
-   "category": "Motion Grounding",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Cross-Modal Retrieval for Motion and Text via DropTriple Loss",
+   "authors": [
+    "Yan"
+   ],
+   "year": 2023,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2305.04195",
+   "arxiv_id": "2305.04195",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "PoseScript: Linking 3D Human Poses and Natural Language",
+   "authors": [
+    "Delmas"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2210.11795",
+   "arxiv_id": "2210.11795",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "MotionCLIP: Exposing Human Motion Generation to CLIP Space",
+   "authors": [
+    "Tevet"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2203.08063",
+   "arxiv_id": "2203.08063",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Learning Joint Representation of Human Motion and Language",
+   "authors": [
+    "Kim"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2210.15187",
+   "arxiv_id": "2210.15187",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   },
   {
    "title": "Zero-Shot Open-Vocabulary Human Motion Grounding with Test-Time Training",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Zhou"
+   ],
+   "year": 2022,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2511.15379",
    "arxiv_id": "2511.15379",
@@ -430,31 +391,76 @@
    "added": "2026-08-27"
   },
   {
-   "title": "MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion",
-   "authors": [],
-   "year": null,
+   "title": "Text-controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion",
+   "authors": [
+    "Wang"
+   ],
+   "year": 2022,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2409.12140",
-   "arxiv_id": "2409.12140",
+   "url": "https://arxiv.org/abs/2404.11375",
+   "arxiv_id": "2404.11375",
    "source": "seed",
-   "category": "Retrieval-Augmented & Generation-Oriented",
+   "category": "Motion Grounding",
    "added": "2026-08-27"
   },
   {
-   "title": "ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model",
-   "authors": [],
-   "year": null,
+   "title": "MLP: Motion Label Prior for Temporal Sentence Localization in Untrimmed 3D Human Motions",
+   "authors": [
+    "Yan"
+   ],
+   "year": 2022,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2304.01116",
-   "arxiv_id": "2304.01116",
+   "url": "https://arxiv.org/abs/2404.13657",
+   "arxiv_id": "2404.13657",
+   "source": "seed",
+   "category": "Motion Grounding",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "MATE: Motion-Aligned Word Embeddings for Text-to-Motion Generation",
+   "authors": [
+    "Han"
+   ],
+   "year": 2022,
+   "venue": "OpenReview",
+   "url": "https://openreview.net/forum?id=5a865418ed9b9ce0d751835fd4b3d230c39274d8",
+   "arxiv_id": null,
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "Towards Highly-Constrained Human Motion Generation with Retrieval-Guided Diffusion Noise Optimization",
+   "authors": [
+    "Liu"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2605.08054",
+   "arxiv_id": "2605.08054",
+   "source": "seed",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-08-27"
+  },
+  {
+   "title": "VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models",
+   "authors": [
+    "Xu"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "url": "https://arxiv.org/abs/2508.12081",
+   "arxiv_id": "2508.12081",
    "source": "seed",
    "category": "Retrieval-Augmented & Generation-Oriented",
    "added": "2026-08-27"
   },
   {
    "title": "ReMoMask: Retrieval-Augmented Masked Motion Generation",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Li"
+   ],
+   "year": 2022,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2508.02605",
    "arxiv_id": "2508.02605",
@@ -464,8 +470,10 @@
   },
   {
    "title": "RMD: A Simple Baseline for More General Human Motion Generation via Training-free Retrieval-Augmented Motion Diffuse",
-   "authors": [],
-   "year": null,
+   "authors": [
+    "Liao"
+   ],
+   "year": 2022,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2412.04343",
    "arxiv_id": "2412.04343",
@@ -474,36 +482,42 @@
    "added": "2026-08-27"
   },
   {
-   "title": "VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models",
-   "authors": [],
-   "year": null,
+   "title": "MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion",
+   "authors": [
+    "Kalakonda"
+   ],
+   "year": 2022,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2508.12081",
-   "arxiv_id": "2508.12081",
+   "url": "https://arxiv.org/abs/2409.12140",
+   "arxiv_id": "2409.12140",
    "source": "seed",
    "category": "Retrieval-Augmented & Generation-Oriented",
    "added": "2026-08-27"
   },
   {
-   "title": "A Cross-Dataset Study for Text-based 3D Human Motion Retrieval",
-   "authors": [],
-   "year": null,
+   "title": "ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model",
+   "authors": [
+    "Zhang"
+   ],
+   "year": 2022,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2405.16909",
-   "arxiv_id": "2405.16909",
+   "url": "https://arxiv.org/abs/2304.01116",
+   "arxiv_id": "2304.01116",
    "source": "seed",
-   "category": "Datasets & Benchmarks",
+   "category": "Retrieval-Augmented & Generation-Oriented",
    "added": "2026-08-27"
   },
   {
-   "title": "Joint-Dataset Learning and Cross-Consistent Regularization for Text-to-Motion Retrieval",
-   "authors": [],
-   "year": null,
+   "title": "Multimodal Generative AI with Autoregressive LLMs for Human Motion Understanding and Generation: A Way Forward",
+   "authors": [
+    "Islam"
+   ],
+   "year": 2022,
    "venue": "arXiv",
-   "url": "https://arxiv.org/abs/2407.02104",
-   "arxiv_id": "2407.02104",
+   "url": "https://arxiv.org/abs/2506.03191",
+   "arxiv_id": "2506.03191",
    "source": "seed",
-   "category": "Datasets & Benchmarks",
+   "category": "Text-Motion Retrieval",
    "added": "2026-08-27"
   }
  ]

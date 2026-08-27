@@ -20,15 +20,24 @@ def format_entry(idx, p):
         auth = f"{first} et al." if len(authors) > 1 else authors[0]
     else:
         auth = ""
+    venue = p.get("venue") or ""
+    year = p.get("year")
     link = ""
     if p.get("arxiv_id"):
         link = f"[arXiv](https://arxiv.org/abs/{p['arxiv_id']})"
     elif p.get("url"):
-        label = p.get("venue") or "Paper"
+        label = venue or "Paper"
         link = f"[{label}]({p['url']})"
     parts = [f"{idx}. **{title}**"]
     if auth:
         parts.append(f", {auth}")
+    # Show venue + year (venue repeated in the link label is intentional: it
+    # tells the reader where the link points).
+    meta = " ".join(str(x) for x in [venue, year] if x)
+    if meta and venue != "arXiv":
+        parts.append(f", {meta}")
+    elif year:
+        parts.append(f", {year}")
     if link:
         parts.append(f", {link}")
     return "".join(parts)
