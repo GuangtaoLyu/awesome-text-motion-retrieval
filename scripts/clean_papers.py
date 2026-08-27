@@ -123,84 +123,128 @@ def _doi_from_url(url):
 
 
 def _ieee_from_doi(doi):
-    """IEEE DOIs encode the venue: 10.1109/<CONF>... -> conference acronym."""
+    """IEEE DOIs encode the venue: 10.1109/<CONF>... -> conference acronym.
+
+    Returns the canonical (proper-cased) acronym, e.g. "ICCV", "CVPR",
+    "IEEE CG&A", "IEEE SPL". The raw segment is lower-cased by the regex, so we
+    uppercase and map it through the known set.
+    """
     if not doi:
         return None
     m = re.match(r"10\.1109/([A-Za-z]+)", doi)
     if not m:
         return None
-    seg = m.group(1)
+    seg = m.group(1).upper()
     return {
         "MCG": "IEEE CG&A", "TVCG": "IEEE TVCG", "TPAMI": "IEEE TPAMI",
         "TRO": "IEEE TRO", "RA-L": "IEEE RA-L", "ACCESS": "IEEE Access",
-        "TMM": "IEEE TMM", "TGRS": "IEEE TGRS",
+        "TMM": "IEEE TMM", "TGRS": "IEEE TGRS", "LSP": "IEEE SPL",
+        "CVPR": "CVPR", "ICCV": "ICCV", "ECCV": "ECCV", "ICME": "ICME",
+        "ICRA": "ICRA", "WACV": "WACV", "IROS": "IROS", "FG": "FG",
+        "3DV": "3DV", "BMVC": "BMVC", "IJCNN": "IJCNN", "TNNLS": "IEEE TNNLS",
     }.get(seg, seg)
 
 
-def _crossref_venue(doi, cache):
-    """Best conference/journal name from a DOI via Crossref.
+def _year_from_doi(doi):
+    """Extract the publication year encoded in a DOI string.
 
-    Prefers `event.acronym` (e.g. "MM '24") and the *specific* container-title
-    (Crossref lists the series name first, e.g. "Lecture Notes in Computer
-    Science", then the real conference, e.g. "Computer Vision - ECCV 2020").
-    Returns None on failure so the caller can try other sources.
+    IEEE DOIs embed the year as `<code>.<YYYY>.<article>` (e.g.
+    `10.1109/iccv51701.2025.00948` -> 2025, `10.1109/lsp.2024.3425283` -> 2024).
+    This is more reliable than Crossref's sometimes-online-first `issued` date
+    (the IEEE SPL 2024 paper shows issued=2026 while its volume year is 2024).
+    Eurographics DOIs embed it as `10.2312/<code>.<YYYY><rest>`.
     """
-    if doi in cache:
+    if not doi:
+        return None
+    m = re.search(r"10\.1109/\w+\.(\d{4})\.", doi)
+    if m:
+        return int(m.group(1))
+    m = re.search(r"10\.2312/\w+\.(\d{4})", doi)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def _crossref_meta(doi, cache):
+    """Best (venue, year) from a DOI via Crossref, resolved TOGETHER.
+
+    Returns a (venue, year) tuple (either may be None). Prefers `event.acronym`
+    and the *specific* container-title (Crossref lists the series name first,
+    e.g. "Lecture Notes in Computer Science", then the real conference, e.g.
+    "Computer Vision - ECCV 2020"). The year comes from the `issued` date-parts;
+    for IEEE/Eurographics DOIs we additionally trust the year encoded in the DOI
+    string itself (more reliable than Crossref's sometimes-online-first
+    `issued` date). Caches by DOI.
+    """
+    if doi in cache and isinstance(cache[doi], tuple):
         return cache[doi]
+    venue = None
+    year = _year_from_doi(doi)  # DOI-string year (IEEE/EG), may be None
     try:
         url = "https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="")
         data = harvest._get(url, timeout=25)
         msg = json.loads(data).get("message", {})
         acr = (msg.get("event") or {}).get("acronym")
         if acr:
-            cache[doi] = acr
-            return acr
-        cts = msg.get("container-title") or []
-        pick = ""
-        for c in cts:
-            if c and "lecture notes" not in c.lower():
-                pick = c
-        if not pick and cts:
-            pick = cts[-1]
-        cache[doi] = pick or None
-        return pick or None
+            venue = acr
+        else:
+            cts = msg.get("container-title") or []
+            pick = ""
+            for c in cts:
+                if c and "lecture notes" not in c.lower():
+                    pick = c
+            if not pick and cts:
+                pick = cts[-1]
+            venue = pick or None
+        dp = (msg.get("issued") or msg.get("published") or {}).get("date-parts")
+        cr_year = None
+        if dp and dp[0] and dp[0][0]:
+            cr_year = int(dp[0][0])
+        if year is None:
+            year = cr_year
     except Exception:
-        cache[doi] = None
-        return None
+        pass
+    result = (venue, year)
+    cache[doi] = result
+    return result
 
 
-def _crossref_by_title(title, cache):
-    """Fallback: resolve venue from the paper title via Crossref."""
+def _crossref_meta_by_title(title, cache):
+    """Fallback: resolve (venue, year) from the paper title via Crossref."""
     if not title:
-        return None
-    key = norm_title(title)
+        return (None, None)
+    key = "title:" + norm_title(title)
     if key in cache:
         return cache[key]
+    venue = None
+    year = None
     try:
         q = ("https://api.crossref.org/works?query.bibliographic="
              + urllib.parse.quote(title) + "&rows=1")
         data = harvest._get(q, timeout=25)
         items = json.loads(data).get("message", {}).get("items", [])
-        if not items:
-            cache[key] = None
-            return None
-        m = items[0]
-        acr = (m.get("event") or {}).get("acronym")
-        if acr:
-            cache[key] = acr
-            return acr
-        cts = m.get("container-title") or []
-        pick = ""
-        for c in cts:
-            if c and "lecture notes" not in c.lower():
-                pick = c
-        if not pick and cts:
-            pick = cts[-1]
-        cache[key] = pick or None
-        return pick or None
+        if items:
+            m = items[0]
+            acr = (m.get("event") or {}).get("acronym")
+            if acr:
+                venue = acr
+            else:
+                cts = m.get("container-title") or []
+                pick = ""
+                for c in cts:
+                    if c and "lecture notes" not in c.lower():
+                        pick = c
+                if not pick and cts:
+                    pick = cts[-1]
+                venue = pick or None
+            dp = (m.get("issued") or m.get("published") or {}).get("date-parts")
+            if dp and dp[0] and dp[0][0]:
+                year = int(dp[0][0])
     except Exception:
-        cache[key] = None
-        return None
+        pass
+    result = (venue, year)
+    cache[key] = result
+    return result
 
 
 def _short_venue(v):
@@ -215,10 +259,16 @@ def _short_venue(v):
         (r"International Conference on Computer Vision and Pattern Recognition", "CVPR"),
         (r"Conference on Computer Vision and Pattern Recognition", "CVPR"),
         (r"International Conference on Computer Vision", "ICCV"),
-        (r"Computer Vision – ECCV", "ECCV"),
+        (r"Computer Vision\s*[–-]\s*ECCV", "ECCV"),
         (r"European Conference on Computer Vision", "ECCV"),
         (r"International Conference on Machine Learning", "ICML"),
         (r"Conference on Neural Information Processing Systems", "NeurIPS"),
+        (r"International Conference on Learning Representations", "ICLR"),
+        (r"International Conference on Computational Linguistics", "ACL"),
+        (r"Conference on Empirical Methods in Natural Language Processing", "EMNLP"),
+        (r"North American Chapter of the ACL.*Human Language Technologies", "NAACL"),
+        (r"International Conference on Artificial Intelligence and Statistics", "AISTATS"),
+        (r"Conference on Language Modeling", "COLM"),
         (r"AAAI Conference on Artificial Intelligence", "AAAI"),
         (r"International Conference on Acoustics", "ICASSP"),
         (r"International Conference on Robotics and Automation", "ICRA"),
@@ -256,42 +306,67 @@ _PUBLISHER = {"ieee", "acm", "springer", "openreview", "lncs", "arxiv", "", None
 
 
 def enrich_venues(papers):
-    """Fill `venue` with the *conference/journal* name (CVPR, ECCV, NeurIPS,
-    ACM MM, ...). Resolution order:
-      arXiv id            -> "arXiv"
-      DOI 10.1109/<CONF>  -> IEEE conference acronym
-      DOI 10.2312/...     -> Eurographics
-      DOI (other)         -> Crossref (event.acronym / specific container-title)
-      any other / no link -> Crossref by title
-    Already-good venues (e.g. captured inline from the README) are kept.
+    """Fill `venue` AND `year` from authoritative sources, resolved TOGETHER
+    from the same source so they can never disagree.
+
+    Resolution order:
+      existing real venue+year (from an inline `Venue YYYY` annotation) -> kept
+      arXiv id                 -> venue "arXiv" (year left as-is)
+      DOI 10.1109/<CONF>       -> IEEE acronym + DOI-string year
+      DOI 10.2312/...          -> Eurographics + DOI-string year
+      DOI (other)              -> Crossref (event.acronym / container-title,
+                                  issued year)
+      any other / no link      -> Crossref by title (venue AND year)
+    IMPORTANT: a paper's URL (including openreview.net) is NEVER used to infer
+    its venue or year. OpenReview hosts ICLR/NeurIPS/ICML/COLM/AISTATS/workshops
+    alike, so the link alone says nothing about the venue; only Crossref (or an
+    explicit inline annotation) decides. Publisher/series names (IEEE, ACM,
+    Springer, OpenReview, LNCS, arXiv) are never emitted as a venue.
     """
     cache = {}
     for p in papers:
         cur = p.get("venue")
-        if cur and str(cur).lower() not in _PUBLISHER:
-            continue  # already a real venue (incl. inline from README)
+        have_venue = bool(cur) and str(cur).lower() not in _PUBLISHER
+        have_year = bool(p.get("year"))
+        # Already fully populated -> leave untouched (preserves curator fixes).
+        if have_venue and have_year:
+            continue
         if p.get("arxiv_id"):
-            p["venue"] = "arXiv"
+            if not have_venue:
+                p["venue"] = "arXiv"
             continue
         url = p.get("url") or ""
         doi = _doi_from_url(url)
         v = None
+        y = None
         if doi:
             ieee = _ieee_from_doi(doi)
             if ieee:
                 v = ieee
+                y = _year_from_doi(doi)
             elif doi.startswith("10.2312/"):
                 v = "Eurographics"
+                y = _year_from_doi(doi)
             else:
-                v = _crossref_venue(doi, cache)
-        if not v:
-            # OpenReview / IEEE-document / no-link: resolve by title.
-            v = _crossref_by_title(p.get("title"), cache)
+                v, y = _crossref_meta(doi, cache)
+                if v is None:
+                    v = _year_from_doi(doi)
+                if y is None:
+                    y = _year_from_doi(doi)
+        if (v is None or y is None) and not doi:
+            # OpenReview / IEEE-doc / no-link: resolve by title (URL ignored).
+            tv, ty = _crossref_meta_by_title(p.get("title"), cache)
+            if v is None:
+                v = tv
+            if y is None:
+                y = ty
         if v:
             v = _short_venue(v)
             v = re.sub(r"\s+(?:19|20)\d{2}$", "", v)
             if str(v).lower() not in _PUBLISHER:
                 p["venue"] = v
+        if y and not have_year:
+            p["year"] = y
     return papers
 
 
