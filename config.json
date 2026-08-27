@@ -51,12 +51,12 @@
       {
         "title": "Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization",
         "venue": "ICLR 2025",
-        "bibtex": "@inproceedings{lyu2025towardsunified,\n  title     = {Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization},\n  author    = {Lyu, Guangtao and Xu, Chenghao and Yan, Jiexi and Yang, Muli and Deng, Cheng},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n  year      = {2025},\n  url       = {https://openreview.net/forum?id=Oh8MuCacJW}\n}"
+        "bibtex": "@inproceedings{lyu2025towards,\n  title={Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization},\n  author={Lyu, Guangtao and Xu, Chenghao and Yan, Jiexi and Yang, Muli and Deng, Cheng},\n  booktitle={The Thirteenth International Conference on Learning Representations (ICLR)},\n  year={2025}\n}"
       },
       {
         "title": "Beyond Global Alignment: Fine-Grained Motion-Language Retrieval via Pyramidal Shapley-Taylor Learning",
-        "venue": "ICML 2026 (arXiv:2601.21904)",
-        "bibtex": "@misc{chen2026globalalignmentfinegrained,\n      title={Beyond Global Alignment: Fine-Grained Motion-Language Retrieval via Pyramidal Shapley-Taylor Learning},\n      author={Hanmo Chen and Guangtao Lyu and Chenghao Xu and Jiexi Yan and Xu Yang and Cheng Deng},\n      year={2026},\n      eprint={2601.21904},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV},\n      url={https://arxiv.org/abs/2601.21904}\n}"
+        "venue": "ICML 2026",
+        "bibtex": "@inproceedings{chen2026beyond,\n  title={Beyond Global Alignment: Fine-Grained Motion-Language Retrieval via Pyramidal Shapley-Taylor Learning},\n  author={Chen, Hanmo and Lyu, Guangtao and Xu, Chenghao and Yan, Jiexi and Yang, Xu and Deng, Cheng},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}"
       }
     ]
   }
