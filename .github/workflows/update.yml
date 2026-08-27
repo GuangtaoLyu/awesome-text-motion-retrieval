@@ -1,0 +1,51 @@
+name: Weekly Auto Update
+
+# Fully automatic: harvest new papers from arXiv + DBLP + Semantic Scholar +
+# Crossref, classify them, regenerate README.md, and push. No human review.
+# Runs every Monday 09:00 UTC (= 17:00 Beijing) and on manual dispatch.
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never let a new run race a still-running one against the same branch.
+concurrency:
+  group: auto-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Best-effort: a transient network failure must not spam notifications.
+      - name: Run update pipeline (harvest + classify + regenerate README)
+        continue-on-error: true
+        run: python scripts/pipeline.py
+
+      # Only push when something actually changed.
+      - name: Push if changed
+        run: |
+          git fetch origin "${GITHUB_REF_NAME}"
+          if [ -z "$(git log "origin/${GITHUB_REF_NAME}..HEAD" --oneline)" ]; then
+            echo "No new commits."
+            exit 0
+          fi
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

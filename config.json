@@ -1,0 +1,48 @@
+{
+  "display_name": "Awesome Text-Motion Retrieval",
+  "description": "A curated, auto-updated list of text-motion retrieval, motion grounding, and retrieval-augmented motion generation papers.",
+  "year_from": 2015,
+  "must_include": [
+    "motion retrieval",
+    "text-motion",
+    "text to motion",
+    "text-to-motion",
+    "motion grounding",
+    "motion-text",
+    "retrieval-augmented",
+    "retrieval for generation"
+  ],
+  "queries": {
+    "arxiv": [
+      "text motion retrieval",
+      "motion retrieval text",
+      "text-to-motion retrieval",
+      "motion grounding"
+    ],
+    "dblp": [
+      "text motion retrieval",
+      "motion retrieval",
+      "motion grounding",
+      "text-to-motion"
+    ],
+    "s2": [
+      "text-to-motion retrieval",
+      "motion retrieval",
+      "motion grounding",
+      "text motion"
+    ],
+    "crossref": [
+      "text motion retrieval",
+      "motion retrieval",
+      "motion grounding"
+    ]
+  },
+  "taxonomy": [
+    "Text-Motion Retrieval",
+    "Motion Grounding",
+    "Retrieval-Augmented & Generation-Oriented",
+    "Datasets & Benchmarks",
+    "Surveys"
+  ],
+  "default_category": "Text-Motion Retrieval"
+}
