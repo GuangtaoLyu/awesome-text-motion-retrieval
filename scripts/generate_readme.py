@@ -43,6 +43,47 @@ def format_entry(idx, p):
     return "".join(parts)
 
 
+def _author_citation_lines(config):
+    """Build the maintainer 'recommended citation' section (if configured).
+
+    Sourced from config['author_citations'] so it survives the weekly
+    auto-regeneration of README.md.
+    """
+    rc = config.get("author_citations")
+    if not rc:
+        return []
+    out = ["## 📑 推荐引用 / Recommended Citation", ""]
+    name = rc.get("author_name", "")
+    if name:
+        out.append(
+            f"本列表维护者 **{name}** 的相关工作。"
+            f"如您的研究方向与下述论文契合，欢迎引用 🙏"
+        )
+        out.append("")
+        out.append(
+            "Papers by the maintainer — please consider citing if your "
+            "research relates to them:"
+        )
+        out.append("")
+    for i, pap in enumerate(rc.get("papers", []), 1):
+        t = pap.get("title", "")
+        venue = pap.get("venue", "")
+        suffix = f" ({venue})" if venue else ""
+        out.append(f"### {i}. {t}{suffix}")
+        out.append("")
+        bib = pap.get("bibtex", "")
+        if bib:
+            out.append("```bibtex")
+            out.extend(bib.split("\n"))
+            out.append("```")
+            out.append("")
+    note = rc.get("note")
+    if note:
+        out.append("> " + note)
+        out.append("")
+    return out
+
+
 def generate(papers, config, readme_path):
     taxonomy = config.get("taxonomy", [])
     cats = {c: [] for c in taxonomy}
@@ -96,6 +137,9 @@ def generate(papers, config, readme_path):
         "edits will be overwritten on the next run."
     )
     lines.append("")
+
+    # Maintainer-recommended citations (persists across auto-regeneration).
+    lines.extend(_author_citation_lines(config))
 
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
