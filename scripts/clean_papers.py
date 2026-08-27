@@ -122,21 +122,85 @@ def _doi_from_url(url):
     return m.group(0) if m else None
 
 
+def _ieee_from_doi(doi):
+    """IEEE DOIs encode the venue: 10.1109/<CONF>... -> conference acronym."""
+    if not doi:
+        return None
+    m = re.match(r"10\.1109/([A-Za-z]+)", doi)
+    if not m:
+        return None
+    seg = m.group(1)
+    return {
+        "MCG": "IEEE CG&A", "TVCG": "IEEE TVCG", "TPAMI": "IEEE TPAMI",
+        "TRO": "IEEE TRO", "RA-L": "IEEE RA-L", "ACCESS": "IEEE Access",
+        "TMM": "IEEE TMM", "TGRS": "IEEE TGRS",
+    }.get(seg, seg)
+
+
 def _crossref_venue(doi, cache):
+    """Best conference/journal name from a DOI via Crossref.
+
+    Prefers `event.acronym` (e.g. "MM '24") and the *specific* container-title
+    (Crossref lists the series name first, e.g. "Lecture Notes in Computer
+    Science", then the real conference, e.g. "Computer Vision - ECCV 2020").
+    Returns None on failure so the caller can try other sources.
+    """
     if doi in cache:
         return cache[doi]
     try:
         url = "https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="")
-        data = harvest._get(url, timeout=20)
+        data = harvest._get(url, timeout=25)
         msg = json.loads(data).get("message", {})
-        sct = msg.get("short-container-title") or []
-        ct = msg.get("container-title") or []
-        v = (sct[0] if sct else (ct[0] if ct else ""))
-        v = v.strip() if v else ""
+        acr = (msg.get("event") or {}).get("acronym")
+        if acr:
+            cache[doi] = acr
+            return acr
+        cts = msg.get("container-title") or []
+        pick = ""
+        for c in cts:
+            if c and "lecture notes" not in c.lower():
+                pick = c
+        if not pick and cts:
+            pick = cts[-1]
+        cache[doi] = pick or None
+        return pick or None
     except Exception:
-        v = ""
-    cache[doi] = v
-    return v
+        cache[doi] = None
+        return None
+
+
+def _crossref_by_title(title, cache):
+    """Fallback: resolve venue from the paper title via Crossref."""
+    if not title:
+        return None
+    key = norm_title(title)
+    if key in cache:
+        return cache[key]
+    try:
+        q = ("https://api.crossref.org/works?query.bibliographic="
+             + urllib.parse.quote(title) + "&rows=1")
+        data = harvest._get(q, timeout=25)
+        items = json.loads(data).get("message", {}).get("items", [])
+        if not items:
+            cache[key] = None
+            return None
+        m = items[0]
+        acr = (m.get("event") or {}).get("acronym")
+        if acr:
+            cache[key] = acr
+            return acr
+        cts = m.get("container-title") or []
+        pick = ""
+        for c in cts:
+            if c and "lecture notes" not in c.lower():
+                pick = c
+        if not pick and cts:
+            pick = cts[-1]
+        cache[key] = pick or None
+        return pick or None
+    except Exception:
+        cache[key] = None
+        return None
 
 
 def _short_venue(v):
@@ -144,23 +208,42 @@ def _short_venue(v):
     if not v:
         return v
     table = [
+        (r"MM '?\d+", "ACM MM"),
         (r"International Conference on Multimedia and Expo", "ICME"),
         (r"International Conference on Multimedia", "ACM MM"),
         (r"SIGIR Conference", "SIGIR"),
         (r"International Conference on Computer Vision and Pattern Recognition", "CVPR"),
         (r"Conference on Computer Vision and Pattern Recognition", "CVPR"),
         (r"International Conference on Computer Vision", "ICCV"),
+        (r"Computer Vision – ECCV", "ECCV"),
         (r"European Conference on Computer Vision", "ECCV"),
         (r"International Conference on Machine Learning", "ICML"),
         (r"Conference on Neural Information Processing Systems", "NeurIPS"),
         (r"AAAI Conference on Artificial Intelligence", "AAAI"),
         (r"International Conference on Acoustics", "ICASSP"),
+        (r"International Conference on Robotics and Automation", "ICRA"),
+        (r"International Conference on Intelligent Robots and Systems", "IROS"),
+        (r"International Joint Conference on Artificial Intelligence", "IJCAI"),
+        (r"British Machine Vision Conference", "BMVC"),
+        (r"Winter Conference on Applications of Computer Vision", "WACV"),
+        (r"International Conference on 3D Vision", "3DV"),
         (r"Computer Graphics Forum", "Comput. Graph. Forum"),
         (r"Comput\. Grap\. Appl\.", "IEEE CG&A"),
         (r"Proc\. ACM Comput\. Graph\. Interact\. Tech\.", "PACMCGIT"),
+        (r"ACM Transactions on Graphics", "ACM TOG"),
+        (r"International Journal of Computer Vision", "IJCV"),
+        (r"IEEE Transactions on Pattern Analysis and Machine Intelligence", "IEEE TPAMI"),
+        (r"IEEE Transactions on Visualization and Computer Graphics", "IEEE TVCG"),
+        (r"IEEE Transactions on Robotics", "IEEE TRO"),
+        (r"IEEE Robotics and Automation Letters", "IEEE RA-L"),
         (r"Lecture Notes in Computer Science", "LNCS"),
         (r"SIGGRAPH Asia", "SIGGRAPH Asia"),
+        (r"Eurographics", "Eurographics"),
+        (r"Proceedings of the ACM on Computer Graphics and Interactive Techniques", "PACMCGIT"),
+        (r"SA '?\d+", "SIGGRAPH Asia"),
+        (r"IEEE Signal Processing Letters", "IEEE SPL"),
         (r"PLoS One", "PLOS ONE"),
+        (r"Displays", "Displays"),
     ]
     for pat, abbr in table:
         if re.search(pat, v, re.IGNORECASE):
@@ -168,26 +251,47 @@ def _short_venue(v):
     return v
 
 
+# Publisher/series names are NOT venues -- never emit these as the venue.
+_PUBLISHER = {"ieee", "acm", "springer", "openreview", "lncs", "arxiv", "", None}
+
+
 def enrich_venues(papers):
-    """Fill `venue` for every paper: arXiv for preprints, Crossref short
-    container-title for DOIs, host label otherwise."""
+    """Fill `venue` with the *conference/journal* name (CVPR, ECCV, NeurIPS,
+    ACM MM, ...). Resolution order:
+      arXiv id            -> "arXiv"
+      DOI 10.1109/<CONF>  -> IEEE conference acronym
+      DOI 10.2312/...     -> Eurographics
+      DOI (other)         -> Crossref (event.acronym / specific container-title)
+      any other / no link -> Crossref by title
+    Already-good venues (e.g. captured inline from the README) are kept.
+    """
     cache = {}
     for p in papers:
-        # already good (arXiv, or a previously-enriched crossref/dblp venue)?
-        if p.get("venue") in ("arXiv",) or p.get("source") in ("crossref", "dblp"):
-            continue
+        cur = p.get("venue")
+        if cur and str(cur).lower() not in _PUBLISHER:
+            continue  # already a real venue (incl. inline from README)
         if p.get("arxiv_id"):
             p["venue"] = "arXiv"
             continue
-        doi = _doi_from_url(p.get("url"))
-        v = _crossref_venue(doi, cache) if doi else ""
+        url = p.get("url") or ""
+        doi = _doi_from_url(url)
+        v = None
+        if doi:
+            ieee = _ieee_from_doi(doi)
+            if ieee:
+                v = ieee
+            elif doi.startswith("10.2312/"):
+                v = "Eurographics"
+            else:
+                v = _crossref_venue(doi, cache)
         if not v:
-            for h, label in HOST_VENUE.items():
-                if h in (p.get("url") or ""):
-                    v = label
-                    break
+            # OpenReview / IEEE-document / no-link: resolve by title.
+            v = _crossref_by_title(p.get("title"), cache)
         if v:
-            p["venue"] = _short_venue(v)
+            v = _short_venue(v)
+            v = re.sub(r"\s+(?:19|20)\d{2}$", "", v)
+            if str(v).lower() not in _PUBLISHER:
+                p["venue"] = v
     return papers
 
 

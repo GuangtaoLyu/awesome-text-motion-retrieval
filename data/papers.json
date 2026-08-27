@@ -84,8 +84,8 @@
     "Lyu"
    ],
    "year": 2025,
-   "venue": "",
-   "url": "",
+   "venue": "ICLR",
+   "url": "https://openreview.net/forum?id=Oh8MuCacJW",
    "arxiv_id": null,
    "source": "seed",
    "category": "Text-Motion Retrieval",
@@ -188,7 +188,7 @@
     "Shi"
    ],
    "year": 2024,
-   "venue": "ACM",
+   "venue": "ACM MM",
    "url": "https://dl.acm.org/doi/10.1145/3664647.3681625",
    "arxiv_id": null,
    "source": "seed",
@@ -227,7 +227,7 @@
     "Yan"
    ],
    "year": 2024,
-   "venue": "IEEE",
+   "venue": "IEEE SPL",
    "url": "https://ieeexplore.ieee.org/document/10590073/",
    "arxiv_id": null,
    "source": "seed",
@@ -382,7 +382,7 @@
    "authors": [
     "Zhou"
    ],
-   "year": 2022,
+   "year": 2025,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2511.15379",
    "arxiv_id": "2511.15379",
@@ -395,7 +395,7 @@
    "authors": [
     "Wang"
    ],
-   "year": 2022,
+   "year": 2024,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2404.11375",
    "arxiv_id": "2404.11375",
@@ -408,7 +408,7 @@
    "authors": [
     "Yan"
    ],
-   "year": 2022,
+   "year": 2024,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2404.13657",
    "arxiv_id": "2404.13657",
@@ -421,8 +421,8 @@
    "authors": [
     "Han"
    ],
-   "year": 2022,
-   "venue": "OpenReview",
+   "year": 2026,
+   "venue": "ICLR",
    "url": "https://openreview.net/forum?id=5a865418ed9b9ce0d751835fd4b3d230c39274d8",
    "arxiv_id": null,
    "source": "seed",
@@ -434,7 +434,7 @@
    "authors": [
     "Liu"
    ],
-   "year": 2022,
+   "year": 2026,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2605.08054",
    "arxiv_id": "2605.08054",
@@ -447,7 +447,7 @@
    "authors": [
     "Xu"
    ],
-   "year": 2022,
+   "year": 2025,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2508.12081",
    "arxiv_id": "2508.12081",
@@ -460,7 +460,7 @@
    "authors": [
     "Li"
    ],
-   "year": 2022,
+   "year": 2025,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2508.02605",
    "arxiv_id": "2508.02605",
@@ -473,7 +473,7 @@
    "authors": [
     "Liao"
    ],
-   "year": 2022,
+   "year": 2024,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2412.04343",
    "arxiv_id": "2412.04343",
@@ -486,7 +486,7 @@
    "authors": [
     "Kalakonda"
    ],
-   "year": 2022,
+   "year": 2024,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2409.12140",
    "arxiv_id": "2409.12140",
@@ -499,7 +499,7 @@
    "authors": [
     "Zhang"
    ],
-   "year": 2022,
+   "year": 2023,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2304.01116",
    "arxiv_id": "2304.01116",
@@ -512,7 +512,7 @@
    "authors": [
     "Islam"
    ],
-   "year": 2022,
+   "year": 2025,
    "venue": "arXiv",
    "url": "https://arxiv.org/abs/2506.03191",
    "arxiv_id": "2506.03191",

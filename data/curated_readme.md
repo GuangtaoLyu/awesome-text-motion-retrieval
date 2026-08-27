@@ -32,7 +32,7 @@ Papers whose primary task is **cross-modal retrieval** between human motion and 
 ### 2025
 
 6. **WaMo: Wavelet-Enhanced Multi-Frequency Trajectory Analysis for Fine-Grained Text-Motion Retrieval**  ,   Ren et al.  ,   [![arXiv](https://img.shields.io/badge/arXiv-2508.03343-b31b1b.svg)](https://arxiv.org/abs/2508.03343)
-7. **Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization**  ,   Lyu et al.  ,
+7. **Towards Unified Human Motion-Language Understanding via Sparse Interpretable Characterization**  ,   Lyu et al.  ,   ICLR 2025  ,   [OpenReview](https://openreview.net/forum?id=Oh8MuCacJW)
 8. **SGAR: Structural Generative Augmentation for 3D Human Motion Retrieval**  ,   Zhang et al.  ,   NeurIPS 2025  ,   [Paper](https://papers.neurips.cc/paper_files/paper/2025/hash/99e6344e5db70177724367b3e55a88c2-Abstract-Conference.html)
 9. **SAMR: Symmetric Masked Multimodal Modeling for General Multi-modal 3D Motion Retrieval**  ,   Li et al.  ,   Displays 2025  ,   [Paper](https://doi.org/10.1016/j.displa.2025.102987)
 10. **Multi-Modal Motion Retrieval by Learning a Fine-Grained Joint Embedding Space**  ,   Yu et al.  ,   [![arXiv](https://img.shields.io/badge/arXiv-2507.23188-b31b1b.svg)](https://arxiv.org/abs/2507.23188)
