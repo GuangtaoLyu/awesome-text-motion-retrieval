@@ -1119,6 +1119,38 @@
    "source": "crossref",
    "category": "Motion Grounding",
    "added": "2026-08-30"
+  },
+  {
+   "title": "CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents",
+   "authors": [
+    "Jaewon Jung",
+    "Haizhong Zheng",
+    "Hongsun Jang",
+    "Jaeyong Song",
+    "Beidi Chen",
+    "Jinho Lee"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2608.28389v1",
+   "arxiv_id": "2608.28389",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-08-31"
+  },
+  {
+   "title": "Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching",
+   "authors": [
+    "Ahmad Asadi",
+    "Reza Safabakhsh"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2608.28252v1",
+   "arxiv_id": "2608.28252",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-08-31"
   }
  ]
 }
