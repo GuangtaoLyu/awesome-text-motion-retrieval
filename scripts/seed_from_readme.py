@@ -70,8 +70,15 @@ def parse(readme_path):
         # Inline venue/year written by the curator on the entry line, e.g.
         # ", NeurIPS 2025," or ", ICLR 2026,". Prefer these when present
         # (more specific than the section heading year, and authoritative).
+        #
+        # IMPORTANT: search only the VISIBLE text. The line also carries the
+        # arXiv badge URL (.../arXiv-2005.05751-...), whose "2005" is a YYMM
+        # prefix, not a year -- scanning the raw line used to record
+        # "Unpaired Motion Style Transfer" as a 2005 paper instead of 2020.
+        plain = re.sub(r"\]\([^)]*\)", " ", line)   # markdown link targets
+        plain = re.sub(r"!\[[^\]]*\]", " ", plain)  # badge image labels
         inline_year = None
-        iy = re.search(r"\b((?:19|20)\d{2})\b", line)
+        iy = re.search(r"\b((?:19|20)\d{2})\b", plain)
         if iy:
             inline_year = int(iy.group(1))
         inline_venue = ""

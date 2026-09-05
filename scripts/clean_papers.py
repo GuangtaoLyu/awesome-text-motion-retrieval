@@ -34,6 +34,7 @@ sys.path.insert(0, HERE)
 from lib_common import load_json, save_json, norm_title  # noqa: E402
 import generate_readme  # noqa: E402
 import seed_from_readme  # noqa: E402
+import dedupe  # noqa: E402
 import harvest  # noqa: E402  (reuses _get with 429 backoff)
 
 DATA = os.path.join(ROOT, "data")
@@ -389,22 +390,16 @@ def main():
     print(f"[clean] metadata: {before} papers missing year/venue -> {after}")
 
     # --- 1) de-duplicate ------------------------------------------------
-    seen = {}
-    deduped = []
-    for p in papers:
-        nt = norm_title(p.get("title", ""))
-        url = (p.get("url") or "").lower().replace("https://", "").replace("http://", "").rstrip("/")
-        aix = p.get("arxiv_id") or ""
-        if nt in seen or (url and url in seen) or (aix and aix in seen):
-            continue
-        seen[nt] = True
-        if url:
-            seen[url] = True
-        if aix:
-            seen[aix] = True
-        deduped.append(p)
-    n_dup = len(papers) - len(deduped)
-    print(f"[clean] dedup: {len(papers)} -> {len(deduped)} ({n_dup} duplicates)")
+    # Use the shared consolidator so duplicates are MERGED (arXiv link + real
+    # venue both survive) instead of one variant being silently dropped, and so
+    # the matching rules match pipeline.py's. The old loop keyed on the url,
+    # which is exactly why multi-source harvests created duplicates.
+    papers, dups = dedupe.consolidate(papers)
+    n_dup = len(dups)
+    deduped = papers
+    for surv, dropped, why in dups:
+        print(f"[clean]   - {dropped[:64]!r} -> {surv[:48]!r} [{why}]")
+    print(f"[clean] dedup: {len(deduped) + n_dup} -> {len(deduped)} ({n_dup} duplicates)")
 
     # --- 2) drop off-topic ---------------------------------------------
     kept = []
