@@ -803,6 +803,35 @@
    "source": "s2",
    "category": "Motion Grounding",
    "added": "2026-08-30"
+  },
+  {
+   "title": "Qlippy: A Retrieval-Augmented GenAI Assistant for Reproducible Quantum Workflows and Experiment Tracking",
+   "authors": [
+    "Mahee Gamage",
+    "Vlad Stirbu"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2609.05039v1",
+   "arxiv_id": "2609.05039",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-09-07"
+  },
+  {
+   "title": "A Bidirectional Hybrid Retrieval-AugmentedFramework for Yakshagana Text Simplificationand Semantic Retrieval",
+   "authors": [
+    "Roopa G K",
+    "P.  Santhi Thilagam",
+    "ANNAPPA Basava"
+   ],
+   "year": 2026,
+   "venue": "",
+   "url": "https://doi.org/10.2139/ssrn.7388507",
+   "arxiv_id": null,
+   "source": "crossref",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-09-07"
   }
  ]
 }

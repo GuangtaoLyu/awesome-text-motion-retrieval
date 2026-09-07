@@ -2,7 +2,7 @@
 
 A curated, auto-updated list of text-motion retrieval, motion grounding, and retrieval-augmented motion generation papers.
 
-*Last updated: 2026-09-05 | Total papers: 58*
+*Last updated: 2026-09-07 | Total papers: 60*
 
 > 🤖 Auto-updated weekly by GitHub Actions (multi-source: arXiv + DBLP + Semantic Scholar + Crossref). Entries are auto-categorized by topic.
 
@@ -65,17 +65,19 @@ A curated, auto-updated list of text-motion retrieval, motion grounding, and ret
 
 ## Retrieval-Augmented & Generation-Oriented
 
-1. **CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents**, Jung et al., 2026, [arXiv](https://arxiv.org/abs/2608.28389)
-2. **Liability in Motion: A retrieval-augmented LLM application in road traffic liability apportionment**, Felix Riechmann, 2026, [Paper](https://doi.org/10.21203/rs.3.rs-10077930/v1)
-3. **pro-team at LLMs4OL 2026 Tasks Flagship and Reuse: Retrieval-Augmented Generation and Vocabulary-Constrained Filtering for Ontology Learning**, Mishra et al., 2026, [arXiv](https://arxiv.org/abs/2608.27101)
-4. **Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching**, Asadi et al., 2026, [arXiv](https://arxiv.org/abs/2608.28252)
-5. **MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation**, Zhu et al., NeurIPS 2025, [NeurIPS](http://papers.nips.cc/paper_files/paper/2025/hash/fd34c036d2408625ff7afcb4af134475-Abstract-Conference.html)
-6. **ReMoMask: Retrieval-Augmented Masked Motion Generation**, Li, 2025, [arXiv](https://arxiv.org/abs/2508.02605)
-7. **Retrieval-Augmented Text Generation: Methods, Challenges, and Applications**, Jeanie Genesis, 2025, [Paper](https://doi.org/10.20944/preprints202504.0443.v1)
-8. **VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models**, Xu, NeurIPS 2025, [arXiv](https://arxiv.org/abs/2508.12081)
-9. **MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion**, Kalakonda, 2024, [arXiv](https://arxiv.org/abs/2409.12140)
-10. **RMD: A Simple Baseline for More General Human Motion Generation via Training-free Retrieval-Augmented Motion Diffuse**, Liao, 2024, [arXiv](https://arxiv.org/abs/2412.04343)
-11. **ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model**, Zhang, 2023, [arXiv](https://arxiv.org/abs/2304.01116)
+1. **A Bidirectional Hybrid Retrieval-AugmentedFramework for Yakshagana Text Simplificationand Semantic Retrieval**, K et al., 2026, [Paper](https://doi.org/10.2139/ssrn.7388507)
+2. **CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents**, Jung et al., 2026, [arXiv](https://arxiv.org/abs/2608.28389)
+3. **Liability in Motion: A retrieval-augmented LLM application in road traffic liability apportionment**, Felix Riechmann, 2026, [Paper](https://doi.org/10.21203/rs.3.rs-10077930/v1)
+4. **pro-team at LLMs4OL 2026 Tasks Flagship and Reuse: Retrieval-Augmented Generation and Vocabulary-Constrained Filtering for Ontology Learning**, Mishra et al., 2026, [arXiv](https://arxiv.org/abs/2608.27101)
+5. **Qlippy: A Retrieval-Augmented GenAI Assistant for Reproducible Quantum Workflows and Experiment Tracking**, Gamage et al., 2026, [arXiv](https://arxiv.org/abs/2609.05039)
+6. **Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching**, Asadi et al., 2026, [arXiv](https://arxiv.org/abs/2608.28252)
+7. **MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation**, Zhu et al., NeurIPS 2025, [NeurIPS](http://papers.nips.cc/paper_files/paper/2025/hash/fd34c036d2408625ff7afcb4af134475-Abstract-Conference.html)
+8. **ReMoMask: Retrieval-Augmented Masked Motion Generation**, Li, 2025, [arXiv](https://arxiv.org/abs/2508.02605)
+9. **Retrieval-Augmented Text Generation: Methods, Challenges, and Applications**, Jeanie Genesis, 2025, [Paper](https://doi.org/10.20944/preprints202504.0443.v1)
+10. **VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models**, Xu, NeurIPS 2025, [arXiv](https://arxiv.org/abs/2508.12081)
+11. **MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion**, Kalakonda, 2024, [arXiv](https://arxiv.org/abs/2409.12140)
+12. **RMD: A Simple Baseline for More General Human Motion Generation via Training-free Retrieval-Augmented Motion Diffuse**, Liao, 2024, [arXiv](https://arxiv.org/abs/2412.04343)
+13. **ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model**, Zhang, 2023, [arXiv](https://arxiv.org/abs/2304.01116)
 
 ## Datasets & Benchmarks
 
