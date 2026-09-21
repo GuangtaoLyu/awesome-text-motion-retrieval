@@ -832,6 +832,166 @@
    "source": "crossref",
    "category": "Retrieval-Augmented & Generation-Oriented",
    "added": "2026-09-07"
+  },
+  {
+   "title": "ExGes: Expressive Human Motion Retrieval and Modulation for Audio-Driven Gesture Synthesis",
+   "authors": [
+    "Xukun Zhou",
+    "Fengxin Li",
+    "Ming Chen",
+    "Yan Zhou",
+    "Pengfei Wan",
+    "Di Zhang",
+    "Hongyan Liu",
+    "Jun He",
+    "Zhaoxin Fan"
+   ],
+   "year": 2025,
+   "venue": "IEEE Transactions on Visualization and Computer Graphics",
+   "url": "https://www.semanticscholar.org/paper/18ea759bee911b1223cc1dc8520818f26a928472",
+   "arxiv_id": "2503.06499",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "ReMoGPT: Part-Level Retrieval-Augmented Motion-Language Models",
+   "authors": [
+    "Qing Yu",
+    "Mikihiro Tanaka",
+    "Kent Fujiwara"
+   ],
+   "year": 2025,
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "url": "https://www.semanticscholar.org/paper/c67eb82bd96f0c576bfc0842b75a984a98e75b4b",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Efficient Human Motion Retrieval via Temporal Adjacent Bag of Words and Discriminative Neighborhood Preserving Dictionary Learning",
+   "authors": [
+    "Xin Liu",
+    "Gao-Feng He",
+    "Shu-Juan Peng",
+    "Yiu-ming Cheung",
+    "Yuan-Yan Tang"
+   ],
+   "year": 2017,
+   "venue": "IEEE Transactions on Human-Machine Systems",
+   "url": "https://www.semanticscholar.org/paper/8978eece859c050a0177c631aecf6f8820c89bd0",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Adaptive multi-view feature selection for human motion retrieval",
+   "authors": [
+    "Zhao Wang",
+    "Yinfu Feng",
+    "Tian Qi",
+    "Xiaosong Yang",
+    "J. Zhang"
+   ],
+   "year": 2016,
+   "venue": "Signal Processing",
+   "url": "https://www.semanticscholar.org/paper/88a2c30faf76bc540c43a4eae51a60c5455fba9c",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "3D human motion retrieval using graph kernels based on adaptive graph construction",
+   "authors": [
+    "Meng Li",
+    "Howard Leung",
+    "Zhiguang Liu",
+    "Liuyang Zhou"
+   ],
+   "year": 2016,
+   "venue": "Computers & graphics",
+   "url": "https://www.semanticscholar.org/paper/2b6f5b6bf1fa9da881845b81e56acf1265fddcdb",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Assessing similarity models for human‐motion retrieval applications",
+   "authors": [
+    "Jakub Valcík",
+    "J. Sedmidubský",
+    "P. Zezula"
+   ],
+   "year": 2016,
+   "venue": "Comput. Animat. Virtual Worlds",
+   "url": "https://www.semanticscholar.org/paper/a43d0cb4a4074668a15b6cffe93f72c5f3120a62",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Human Motion Retrieval Based on Statistical Learning and Bayesian Fusion",
+   "authors": [
+    "Qinkun Xiao",
+    "Ren Song"
+   ],
+   "year": 2016,
+   "venue": "PLoS ONE",
+   "url": "https://www.semanticscholar.org/paper/217e094240e09f66311c81dac31050dd84a64d13",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Motion retrieval based on Dynamic Bayesian Network and Canonical Time Warping",
+   "authors": [
+    "Qinkun Xiao",
+    "Siqi Liu"
+   ],
+   "year": 2015,
+   "venue": "Soft Computing - A Fusion of Foundations, Methodologies and Applications",
+   "url": "https://www.semanticscholar.org/paper/50944c8d99d576695905d08c7019ca165406bcc3",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Sketch-based human motion retrieval via selected 2D geometric posture descriptor",
+   "authors": [
+    "Jun Xiao",
+    "Zhangpeng Tang",
+    "Yinfu Feng",
+    "Zhidong Xiao"
+   ],
+   "year": 2015,
+   "venue": "Signal Processing",
+   "url": "https://www.semanticscholar.org/paper/c5a9ac11e35c942e2fb04584927297c34485c986",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
+  },
+  {
+   "title": "Reliability Measures for Sea Ice Motion Retrieval From Synthetic Aperture Radar Images",
+   "authors": [
+    "Thomas Hollands",
+    "S. Linow",
+    "W. Dierking"
+   ],
+   "year": 2015,
+   "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+   "url": "https://www.semanticscholar.org/paper/cf1829766f2cbe12cab50a67b6adc62174f7baed",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-09-21"
   }
  ]
 }
