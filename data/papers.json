@@ -992,6 +992,153 @@
    "source": "s2",
    "category": "Text-Motion Retrieval",
    "added": "2026-09-21"
+  },
+  {
+   "title": "CLIMB: Confidence-Guided Complementary Evidence for Multimodal Retrieval-Augmented Generation",
+   "authors": [
+    "Hang Gao",
+    "Wujiang Xu",
+    "Zhixing Zhang",
+    "Kai Mei",
+    "Jingyi Yang",
+    "Dimitris N. Metaxas"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.03421v1",
+   "arxiv_id": "2610.03421",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "Investigating the Role of Reasoning-Language Alignment in Monolingual Retrieval-Augmented Generation",
+   "authors": [
+    "Oliver Hauck",
+    "Mario Sanz-Guerrero",
+    "Katharina von der Wense"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.03136v1",
+   "arxiv_id": "2610.03136",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "sLLM-based Korean Text-to-Motion Retrieval System Using CNN",
+   "authors": [
+    "Jiwon Choi",
+    "Kwang-Hyun Park"
+   ],
+   "year": 2025,
+   "venue": "The Journal of Korea Robotics Society",
+   "url": "https://www.semanticscholar.org/paper/f057f43145592d0b32158e1356c56e97ee4c94b2",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "HUMAN-TCI: Hierarchical Multi-Stream Motion-Aware Network with Torso-Centered Interaction for Text-to-Motion Retrieval",
+   "authors": [
+    "Muhammad Islam",
+    "Euijoon Ahn",
+    "Usman Naseem",
+    "Tao Huang"
+   ],
+   "year": 2026,
+   "venue": "",
+   "url": "https://www.semanticscholar.org/paper/1085ea9055411c82fce3e4bb992860a2260af2b7",
+   "arxiv_id": "2609.34430",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "ReAlign: Text-to-Motion Generation via Step-Aware Reward-Guided Alignment",
+   "authors": [
+    "Wan-Jiang Weng",
+    "Xiaofeng Tan",
+    "Jun-Bo Wang",
+    "Guo-Sen Xie",
+    "Pan Zhou",
+    "Hong-Song Wang"
+   ],
+   "year": 2025,
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "url": "https://www.semanticscholar.org/paper/668569c0d216e24013c9c3232f30a8392c93b95a",
+   "arxiv_id": "2511.19217",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "Event-T2M: Event-level Conditioning for Complex Text-to-Motion Synthesis",
+   "authors": [
+    "Seong-Eun Hong",
+    "JaeYoung Seon",
+    "Juyeong Hwang",
+    "Jonghwan Shin",
+    "HyeongYeop Kang"
+   ],
+   "year": 2026,
+   "venue": "arXiv.org",
+   "url": "https://www.semanticscholar.org/paper/15ab13127dd7592488ddb48b09e78994090da187",
+   "arxiv_id": "2602.04292",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "Marrying Text-to-Motion Generation with Skeleton-Based Action Recognition",
+   "authors": [
+    "Jidong Kuang",
+    "Hong-Song Wang",
+    "Jie Gui"
+   ],
+   "year": 2026,
+   "venue": "arXiv.org",
+   "url": "https://www.semanticscholar.org/paper/58b93cfc9acbb9ab5ba54e26f46eee3199245c90",
+   "arxiv_id": "2604.17090",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "CITMR: Contrastive Image–Text–Motion Retrieval for Autonomous Driving Critical Scenarios Extraction",
+   "authors": [
+    "Kun Peng",
+    "Shanke Li",
+    "Fei Hui",
+    "Xiyao Liu"
+   ],
+   "year": 2026,
+   "venue": "Journal of Advanced Transportation",
+   "url": "https://www.semanticscholar.org/paper/93a0eb7048f4cc0e65569cce1a9244898fcc7eb9",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-05"
+  },
+  {
+   "title": "MRBench: A Comprehensive Benchmark for Human Motion-Text Retrieval",
+   "authors": [
+    "Fu-Long Liu",
+    "Liang Xu",
+    "Cheng-Qun Yang",
+    "Yu-Hao Zhang",
+    "Yi-Chao Yan",
+    "Xiao-Kang Yang"
+   ],
+   "year": 2026,
+   "venue": "",
+   "url": "https://www.semanticscholar.org/paper/5c8574f0566470c71904d43014d66bf0cd65dc7c",
+   "arxiv_id": "2608.07993",
+   "source": "s2",
+   "category": "Datasets & Benchmarks",
+   "added": "2026-10-05"
   }
  ]
 }
