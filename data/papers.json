@@ -1139,6 +1139,43 @@
    "source": "s2",
    "category": "Datasets & Benchmarks",
    "added": "2026-10-05"
+  },
+  {
+   "title": "ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation",
+   "authors": [
+    "Shun Kato",
+    "Dixin Yang",
+    "Kotaro Amaya",
+    "Yuiga Wada",
+    "Kazumi Fukuda",
+    "Takashi Shibuya",
+    "Yuki Mitsufuji",
+    "Mariko Isogawa"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.13549v1",
+   "arxiv_id": "2610.13549",
+   "source": "arxiv",
+   "category": "Datasets & Benchmarks",
+   "added": "2026-10-12"
+  },
+  {
+   "title": "Retrieval-Augmented Multimodal Language Model with Heterogeneous Evidence Integration for Clinical Prognosis",
+   "authors": [
+    "Hamza Shafiq",
+    "Jialu Tang",
+    "Ting Dang",
+    "Jun Hu",
+    "Aaqib Saeed"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.13510v1",
+   "arxiv_id": "2610.13510",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-10-12"
   }
  ]
 }

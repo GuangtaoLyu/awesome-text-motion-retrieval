@@ -2,7 +2,7 @@
 
 A curated, auto-updated list of text-motion retrieval, motion grounding, and retrieval-augmented motion generation papers.
 
-*Last updated: 2026-10-05 | Total papers: 79*
+*Last updated: 2026-10-12 | Total papers: 81*
 
 > 🤖 Auto-updated weekly by GitHub Actions (multi-source: arXiv + DBLP + Semantic Scholar + Crossref). Entries are auto-categorized by topic.
 
@@ -88,20 +88,22 @@ A curated, auto-updated list of text-motion retrieval, motion grounding, and ret
 6. **pro-team at LLMs4OL 2026 Tasks Flagship and Reuse: Retrieval-Augmented Generation and Vocabulary-Constrained Filtering for Ontology Learning**, Mishra et al., 2026, [arXiv](https://arxiv.org/abs/2608.27101)
 7. **Qlippy: A Retrieval-Augmented GenAI Assistant for Reproducible Quantum Workflows and Experiment Tracking**, Gamage et al., 2026, [arXiv](https://arxiv.org/abs/2609.05039)
 8. **Regime-Aware Portfolio Management via Retrieval-Augmented LLM-Guided Expert Switching**, Asadi et al., 2026, [arXiv](https://arxiv.org/abs/2608.28252)
-9. **MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation**, Zhu et al., NeurIPS 2025, [NeurIPS](http://papers.nips.cc/paper_files/paper/2025/hash/fd34c036d2408625ff7afcb4af134475-Abstract-Conference.html)
-10. **ReMoGPT: Part-Level Retrieval-Augmented Motion-Language Models**, Yu et al., AAAI Conference on Artificial Intelligence 2025, [AAAI Conference on Artificial Intelligence](https://www.semanticscholar.org/paper/c67eb82bd96f0c576bfc0842b75a984a98e75b4b)
-11. **ReMoMask: Retrieval-Augmented Masked Motion Generation**, Li, 2025, [arXiv](https://arxiv.org/abs/2508.02605)
-12. **Retrieval-Augmented Text Generation: Methods, Challenges, and Applications**, Jeanie Genesis, 2025, [Paper](https://doi.org/10.20944/preprints202504.0443.v1)
-13. **VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models**, Xu, NeurIPS 2025, [arXiv](https://arxiv.org/abs/2508.12081)
-14. **MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion**, Kalakonda, 2024, [arXiv](https://arxiv.org/abs/2409.12140)
-15. **RMD: A Simple Baseline for More General Human Motion Generation via Training-free Retrieval-Augmented Motion Diffuse**, Liao, 2024, [arXiv](https://arxiv.org/abs/2412.04343)
-16. **ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model**, Zhang, 2023, [arXiv](https://arxiv.org/abs/2304.01116)
+9. **Retrieval-Augmented Multimodal Language Model with Heterogeneous Evidence Integration for Clinical Prognosis**, Shafiq et al., 2026, [arXiv](https://arxiv.org/abs/2610.13510)
+10. **MotionRAG: Motion Retrieval-Augmented Image-to-Video Generation**, Zhu et al., NeurIPS 2025, [NeurIPS](http://papers.nips.cc/paper_files/paper/2025/hash/fd34c036d2408625ff7afcb4af134475-Abstract-Conference.html)
+11. **ReMoGPT: Part-Level Retrieval-Augmented Motion-Language Models**, Yu et al., AAAI Conference on Artificial Intelligence 2025, [AAAI Conference on Artificial Intelligence](https://www.semanticscholar.org/paper/c67eb82bd96f0c576bfc0842b75a984a98e75b4b)
+12. **ReMoMask: Retrieval-Augmented Masked Motion Generation**, Li, 2025, [arXiv](https://arxiv.org/abs/2508.02605)
+13. **Retrieval-Augmented Text Generation: Methods, Challenges, and Applications**, Jeanie Genesis, 2025, [Paper](https://doi.org/10.20944/preprints202504.0443.v1)
+14. **VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models**, Xu, NeurIPS 2025, [arXiv](https://arxiv.org/abs/2508.12081)
+15. **MoRAG: Multi-Fusion Retrieval Augmented Generation for Human Motion**, Kalakonda, 2024, [arXiv](https://arxiv.org/abs/2409.12140)
+16. **RMD: A Simple Baseline for More General Human Motion Generation via Training-free Retrieval-Augmented Motion Diffuse**, Liao, 2024, [arXiv](https://arxiv.org/abs/2412.04343)
+17. **ReMoDiffuse: Retrieval-Augmented Motion Diffusion Model**, Zhang, 2023, [arXiv](https://arxiv.org/abs/2304.01116)
 
 ## Datasets & Benchmarks
 
-1. **MRBench: A Comprehensive Benchmark for Human Motion-Text Retrieval**, Liu et al., 2026, [arXiv](https://arxiv.org/abs/2608.07993)
-2. **A Cross-Dataset Study for Text-based 3D Human Motion Retrieval**, Bensabath, CVPR Workshops 2024, [arXiv](https://arxiv.org/abs/2405.16909)
-3. **Joint-Dataset Learning and Cross-Consistent Regularization for Text-to-Motion Retrieval**, Messina, ACM Trans. Multim. Comput. Commun. Appl. 2024, [arXiv](https://arxiv.org/abs/2407.02104)
+1. **ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation**, Kato et al., 2026, [arXiv](https://arxiv.org/abs/2610.13549)
+2. **MRBench: A Comprehensive Benchmark for Human Motion-Text Retrieval**, Liu et al., 2026, [arXiv](https://arxiv.org/abs/2608.07993)
+3. **A Cross-Dataset Study for Text-based 3D Human Motion Retrieval**, Bensabath, CVPR Workshops 2024, [arXiv](https://arxiv.org/abs/2405.16909)
+4. **Joint-Dataset Learning and Cross-Consistent Regularization for Text-to-Motion Retrieval**, Messina, ACM Trans. Multim. Comput. Commun. Appl. 2024, [arXiv](https://arxiv.org/abs/2407.02104)
 
 ## Surveys
 
