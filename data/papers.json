@@ -1176,6 +1176,298 @@
    "source": "arxiv",
    "category": "Retrieval-Augmented & Generation-Oriented",
    "added": "2026-10-12"
+  },
+  {
+   "title": "ThetreStageAI: Multi-View Retrieval-Augmented Generation for Structured Bengali Theatre Production Planning",
+   "authors": [
+    "Md. Mehedi Hasan Naeem",
+    "Mst. Kamrunnahar Ruma",
+    "Shakila Sultana",
+    "Nafiza Anjum",
+    "Nasreen Jannatun Nemu",
+    "Md. Sujan Ali"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.23618v1",
+   "arxiv_id": "2610.23618",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "Characterising and Analysing Retrieval-Augmented Generation Techniques",
+   "authors": [
+    "Emmanuel Igbekele",
+    "Olawande Daramola"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "url": "http://arxiv.org/abs/2610.23226v1",
+   "arxiv_id": "2610.23226",
+   "source": "arxiv",
+   "category": "Retrieval-Augmented & Generation-Oriented",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "UniTMGE: Uniform Text-Motion Generation and Editing Model via Diffusion",
+   "authors": [
+    "Ruoyu Wang",
+    "Yang-Fan He",
+    "Teng-Jiao Sun",
+    "Xiang Li",
+    "Tianyu Shi"
+   ],
+   "year": 2025,
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "url": "https://www.semanticscholar.org/paper/2db92245e328f6507258fe0cffda0d90c8588cc8",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "UniMotion-DM: Uniform Text-Motion Generation and Editing via Diffusion Model",
+   "authors": [
+    "Song Lin",
+    "Wenjun Hou"
+   ],
+   "year": 2024,
+   "venue": "IEEE Access",
+   "url": "https://www.semanticscholar.org/paper/48bb8d8e13dd8a3c7b3beded9e3c5c7343d76894",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "MCRE: Multimodal Conditional Representation and Editing for Text-Motion Generation",
+   "authors": [
+    "Teng-Jiao Sun",
+    "Xiang Li",
+    "Tianyu Shi",
+    "Jia-Hui Peng",
+    "Sheng Zheng",
+    "Hansung Kim"
+   ],
+   "year": 2024,
+   "venue": "ECCV Workshops",
+   "url": "https://www.semanticscholar.org/paper/afc8a8700d321c90d9255cacf8c4bddc9500132e",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "HY-Motion 1.0: Scaling Flow Matching Models for Text-To-Motion Generation",
+   "authors": [
+    "Tencent Hunyuan Team"
+   ],
+   "year": 2025,
+   "venue": "arXiv.org",
+   "url": "https://www.semanticscholar.org/paper/54e44b45790f789c6b9593cea708b7db1d43a4c7",
+   "arxiv_id": "2512.23464",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "SELC: Synergistic Text-Motion Enhancement and Latent Constraint Modeling for Text-to-Motion Generation",
+   "authors": [
+    "Xing-Hong Mu",
+    "Yao Hu",
+    "De-Zhao Su",
+    "Xiao-Shuai Hao",
+    "Pei-Guang Jing",
+    "Hong-Bo Sun",
+    "Jing-Lin Xu"
+   ],
+   "year": 2026,
+   "venue": "IEEE transactions on multimedia",
+   "url": "https://www.semanticscholar.org/paper/e36a08944e4ef7ade9da54cfbbaf501c69a57ae0",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "PersonaBooth: Personalized Text-to-Motion Generation",
+   "authors": [
+    "Boeun Kim",
+    "Hea In Jeong",
+    "J. Sung",
+    "Yi-Hua Cheng",
+    "J. Lee",
+    "J. Chang",
+    "Sang-Il Choi",
+    "Y. Choi",
+    "Saim Shin",
+    "Jungho Kim",
+    "Hyung Jin Chang"
+   ],
+   "year": 2025,
+   "venue": "Computer Vision and Pattern Recognition",
+   "url": "https://www.semanticscholar.org/paper/7f4e17a7eb3876777f7c2df7b5a116f39801fec3",
+   "arxiv_id": "2503.07390",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "ParCo: Part-Coordinating Text-to-Motion Synthesis",
+   "authors": [
+    "Qiran Zou",
+    "Shangyuan Yuan",
+    "Shian Du",
+    "Yu Wang",
+    "Chang Liu",
+    "Yi Xu",
+    "Jie Chen",
+    "Xiang-Yang Ji"
+   ],
+   "year": 2024,
+   "venue": "European Conference on Computer Vision",
+   "url": "https://www.semanticscholar.org/paper/f8ade261a504594a02f2ea6f1b55b6f057abc796",
+   "arxiv_id": "2403.18512",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "IRG-MotionLLM: Interleaving Motion Generation, Assessment and Refinement for Text-to-Motion Generation",
+   "authors": [
+    "Yuan-Ming Li",
+    "Qi-Ze Yang",
+    "Nan Lei",
+    "Sheng-Hao Fu",
+    "Ling-an Zeng",
+    "Jian-Fang Hu",
+    "Xihan Wei",
+    "Wei-Shi Zheng"
+   ],
+   "year": 2025,
+   "venue": "arXiv.org",
+   "url": "https://www.semanticscholar.org/paper/aadb7a137548eca5aba939a9e38a497d18f6a69a",
+   "arxiv_id": "2512.10730",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "FreeMotion: A Unified Framework for Number-free Text-to-Motion Synthesis",
+   "authors": [
+    "Ke Fan",
+    "Junshu Tang",
+    "Wei-Jian Cao",
+    "Ran Yi",
+    "Mo-Ran Li",
+    "Jing-yu Gong",
+    "Jiang-Ning Zhang",
+    "Yabiao Wang",
+    "Chengjie Wang",
+    "Li-Zhuang Ma"
+   ],
+   "year": 2024,
+   "venue": "European Conference on Computer Vision",
+   "url": "https://www.semanticscholar.org/paper/f9dfeadca81f89700d8f1a2e7eb67ed1395f85a1",
+   "arxiv_id": "2405.15763",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "Light-T2M: A Lightweight and Fast Model for Text-to-motion Generation",
+   "authors": [
+    "Ling-an Zeng",
+    "Guohong Huang",
+    "Gaojie Wu",
+    "Wei-Shi Zheng"
+   ],
+   "year": 2024,
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "url": "https://www.semanticscholar.org/paper/d17246bbdb5c98119239d08c8f7b02209cccbc8f",
+   "arxiv_id": "2412.11193",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "Semantically Consistent Text-to-Motion with Unsupervised Styles",
+   "authors": [
+    "Linjun Wu",
+    "Xiang-Jun Tang",
+    "Jingyuan Cong",
+    "He Wang",
+    "Bo Hu",
+    "Xu Gong",
+    "Song-Nan Li",
+    "Yuchen Liao",
+    "Yiqian Wu",
+    "Chen Liu",
+    "Xiaogang Jin"
+   ],
+   "year": 2025,
+   "venue": "International Conference on Computer Graphics and Interactive Techniques",
+   "url": "https://www.semanticscholar.org/paper/548901656d13a87105945aa4caefb93951dcda60",
+   "arxiv_id": null,
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "TSTMotion: Training-free Scene-aware Text-to-motion Generation",
+   "authors": [
+    "Zi-Yan Guo",
+    "Haoxuan Qu",
+    "Hossein Rahmani",
+    "D. Soh",
+    "Ping Hu",
+    "Qiu-Hong Ke",
+    "Jun Liu"
+   ],
+   "year": 2025,
+   "venue": "IEEE International Conference on Multimedia and Expo",
+   "url": "https://www.semanticscholar.org/paper/81e7b9105e1e0627cc8226d053dee63a5de68c5d",
+   "arxiv_id": "2505.01182",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "SATO: Stable Text-to-Motion Framework",
+   "authors": [
+    "Wen-Shuo Chen",
+    "Hongru Xiao",
+    "Erhang Zhang",
+    "Li-Jie Hu",
+    "Lei Wang",
+    "Mengyuan Liu",
+    "Chen Chen"
+   ],
+   "year": 2024,
+   "venue": "ACM Multimedia",
+   "url": "https://www.semanticscholar.org/paper/bff7486bb9b3ed2d5729fc9cf4b38e40f7200525",
+   "arxiv_id": "2405.01461",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
+  },
+  {
+   "title": "MoTe: Learning Motion-Text Diffusion Model for Multiple Generation Tasks",
+   "authors": [
+    "Yi-Ming Wu",
+    "Wei Ji",
+    "Kecheng Zheng",
+    "Zicheng Wang",
+    "Dong Xu"
+   ],
+   "year": 2024,
+   "venue": "arXiv.org",
+   "url": "https://www.semanticscholar.org/paper/7854e859705de4c7514a3f2423a0f85c7ea6e56f",
+   "arxiv_id": "2411.19786",
+   "source": "s2",
+   "category": "Text-Motion Retrieval",
+   "added": "2026-10-19"
   }
  ]
 }
